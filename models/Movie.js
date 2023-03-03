@@ -1,4 +1,6 @@
-import mongoose from "mongoose";
+import mongoose from "mongoose"
+
+const { Schema } = mongoose;
 
 const MovieSchema = new mongoose.Schema({
   title: {
@@ -12,3 +14,13 @@ const MovieSchema = new mongoose.Schema({
 });
 
 export default mongoose.models.Movie || mongoose.model("Movie", MovieSchema);
+
+
+// import mongoose from 'mongoose';
+// const { Schema } = mongoose;
+
+// const MovieSchema = new Schema({
+//   title:  String, // String is shorthand for {type: String}
+//   author: String,
+//   body:   String,
+// });
