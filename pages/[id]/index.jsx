@@ -8,10 +8,10 @@ const MoviePage = ({ success, error, movie }) => {
 
   if (!success) {
     return (
-      <div className="container text-center my-5">
+      <div className="container mx-auto text-center my-5">
         <h1>{error} 🤦‍♂️</h1>
 
-        <Link href="/" className="btn btn-success">
+        <Link href="/" className="bg-movies-green text-white rounded my-2 w-full">
           Volver...
         </Link>
       </div>
@@ -30,22 +30,22 @@ const MoviePage = ({ success, error, movie }) => {
   };
 
   return (
-    <div className="container">
+    <div className="container mx-auto">
       <h1>Detalle de Movie</h1>
-      <div className="card">
-        <div className="card-body">
-          <div className="card-title">
+      <div className="max-w-sm rounded overflow-hidden shadow-lg"> {/* card */}
+        <div className="max-w-sm rounded overflow-hidden shadow-lg"> {/* card-body */}
+          <div className="max-w-sm rounded overflow-hidden shadow-lg"> {/* card-title */}
             <h5 className="text-uppercase">{movie.title}</h5>
           </div>
           <p className="fw-light">{movie.plot}</p>
-          <Link href="/" className="btn btn-success btn-sm me-2">
+          <Link href="/" className="bg-yellow-500 text-white rounded mx-24 px-3 py-3">
             Volver...
           </Link>
-          <Link href={`/${movie._id}/edit`} className="btn btn-warning btn-sm me-2">
+          <Link href={`/${movie._id}/edit`} className="bg-yellow-500 text-white rounded mx-24 px-3 py-3"> 
             Editar
           </Link>
           <button
-            className="btn btn-danger btn-sm"
+            className="bg-red-500 text-white rounded mx-24 px-3 py-3" //btn btn-danger btn-sm
             onClick={() => deleteData(movie._id)}
           >
             Eliminar

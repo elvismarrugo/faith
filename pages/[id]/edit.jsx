@@ -35,7 +35,7 @@ const EditMovie = () => {
 
   if (!movie) {
     return (
-      <div className="container mt-5 text-center">
+      <div className="container mx-auto mt-5 text-center">
         <h1>Loading...</h1>
       </div>
     );
@@ -47,7 +47,7 @@ const EditMovie = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container mx-auto">
       <h1>Editar Movie</h1>
       <Form forNewMovie={false} formData={formData}></Form>
     </div>

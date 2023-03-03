@@ -12,18 +12,21 @@ const Home = ({ movies }) => (
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="container">
-        <h1>Movies</h1>
-        <Link href="/new" className="btn btn-primary w-100 mb-2">
-          Agregar+
+      <main className="container ">
+        <h1 className="font-light text-4xl mb-2">Movies T</h1>
+        <Link href="/new" >
+          <div className="bg-movies-blue text-white text-base mx-auto rounded text-center py-2 px-2">Agregar+</div>
         </Link>
         {movies.map(({ _id, title, plot }) => (
           <div className="card mb-2" key={_id}>
-            <div className="card-body">
-              <div className="h5 text-uppercase">{title}</div>
-              <p className="fw-light">{plot}</p>
-              <Link href={`/${_id}`} className="btn btn-success btn-sm">
+            <div className="font-bold text-xl">
+              <div className="h5 uppercase mb-2">{title}</div>
+              <p className="font-light text-base  mb-4">{plot}</p>
+              <Link href={`/${_id}`}>
+               
+                <div className="bg-movies-green text-white text-sm rounded text-center py-2 px-2">
                 Más info...
+          </div>
               </Link>
             </div>
           </div>

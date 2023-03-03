@@ -94,7 +94,7 @@ const Form = ({ formData, forNewMovie = true }) => {
   return (
     <form onSubmit={handleSubmit}>
       <input
-        className="form-control my-2"
+        className="appearance-none block w-full bg-white-200 text-gray-700 border border-red-500 rounded py-1.5 px-3 my-2 leading-tight focus:outline-none focus:bg-white"
         type="text"
         placeholder="Title"
         autoComplete="off"
@@ -103,7 +103,7 @@ const Form = ({ formData, forNewMovie = true }) => {
         onChange={handleChange}
       />
       <input
-        className="form-control my-2"
+        className="appearance-none block w-full bg-white-200 text-gray-700 border border-red-500 rounded py-1.5 px-3 my-2 leading-tight focus:outline-none focus:bg-white"
         type="text"
         placeholder="Plot"
         autoComplete="off"
@@ -111,10 +111,10 @@ const Form = ({ formData, forNewMovie = true }) => {
         value={form.plot}
         onChange={handleChange}
       />
-      <button className="btn btn-primary w-100" type="submit">
+      <button className="bg-blue-500 text-white w-full py-1.5 px-3 my-2 rounded" type="submit">
         {forNewMovie ? "Agregar+" : "Editar"}
       </button>
-      <Link href="/" className="btn btn-warning w-100 my-2">
+      <Link href="/" className="bg-movies-yellow text-white w-full py-1.5 px-3 my-2 rounded">
         Volver...
       </Link>
       {message.map(({ message }) => (

@@ -7,8 +7,8 @@ const New = () => {
   };
 
   return (
-    <div className="container">
-      <h1 className="my-3">Agregar+ Movie</h1>
+    <div className="container mx-auto">
+        <h1 className="font-light text-4xl py-4">Agregar+ Movie</h1>
       <Form formData={formData} />
     </div>
   );
